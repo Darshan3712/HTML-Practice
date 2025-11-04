@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        section{
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        h2{
+            color: #0077cc;
+            border-bottom: 1px solid #ccc;
+
+        }
+
+        code{
+            background-color: #f5f5f5;
+            padding : 2px 5px;
+            border-radius: 4px;
+        }
+
+        figure{
+            border: 1px solid #ccc;
+            padding: 5px;
+            width: fit-content;
+        }
+        
+        
+
+    </style>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <header>
+
+        <h1>HTML 5 Tags - Complete Example Page </h1>
+
+            <nav>
+                <a href="#text">Text</a>
+                <a href="#lists">Lists</a>
+                <a href="#media">Media</a>
+                <a href="#tables">Tables</a>
+                <a href="#forms">Forms</a>
+            </nav>
+
+    </header>
+    
+    <main>
+        <section id="text">
+            <h2>Text & Headings</h2>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <p>This is a <strong>paragraph</strong> with <em>emphasized</em> and <u>underlined</u> text.</p>
+            <p>Inline Code <code> let x = 10;</code></p>
+            <p>Subscription: H<sub><sub>2</sub></sub>o,  Subscription:E= mc<sup>2</sup></p>
+            <blockquote>"This is a quote using the blockquote tag."</blockquote>
+
+            <pre>
+                function hello{
+                    console.log("Preformatted text")
+                }
+            </pre>
+
+        </section>
+
+        <section id="lists">
+            <h2>Lists</h2>
+            <h3>Ordered List</h3>
+            <ol>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ol>
+            
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cherry</li>
+            </ul>
+
+            <h3>Description lists</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
+            </dl>
+        </section>
+
+        <section id="media">
+            <h2>Media</h2>
+            <h3>Image</h3>
+            <figure>
+                <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                <figcaption>Figure 1: Sample Image</figcaption>
+            </figure>
+
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="sample-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <h3>Video</h3>
+            <video width="320" height="240" controls>
+                <source src="sample-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <h3>Canvas</h3>
+            <canvas id="myCanvas" width="200" height="100" style="border: 10px solid #000;"></canvas>
+            <script>
+                const c = document.getElementById("myCanvas");
+                const ctx = c.getContext("2d")
+                ctx.fillStyle = "lightblue";
+                ctx.fillRect(10, 10, 180, 80);
+                ctx.fillStyle = "black";
+                ctx.fillText("Canvas Example", 40, 55);
+            </script>
+        </section>
+
+        <section id="tables">
+            <h2>Tables</h2>
+            <table border="5" cellpadding="115">
+                <caption>Example Table</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Alice</td>
+                        <td>25</td>
+                        <td>London</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>30</td>
+                        <td>Paris</td>
+                    </tr>
+                </tbody>
+                
+                <br>
+                
+                <tfoot>
+                    <tr>
+                        <td colspan="3" align="center">End of Table</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="Forms">
+            <h2>Forms</h2>
+            <form action="">
+
+                <label for="name">Name</label>
+                <input type="text" id="name"><br><br>
+
+                <label for="email">Email</label>
+                <input type="email" id="email"><br><br>
+
+                <label for="message">message</label>
+                <textarea name="" id="message"></textarea><br><br>
+
+                <label for="">Choose a Color : </label>
+                <input type="color" value="#ff0000"><br><br>
+
+                <label for="">choose a fruit</label>
+                <select name="" id="">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="cherry">Cherry</option>
+                </select><br><br>
+
+                <fieldset>
+                    <legend>Gender</legend>
+                    <label for=""><input type="radio" name="gender">Male</label>
+                    <label for=""><input type="radio" name="gender">FeMale</label>
+                </fieldset><br>
+
+                <progress max="100"></progress>Progress <br><br>
+
+                <button type="submit">submit</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Other HTML5 Elements</h2>
+            <details>
+                <summary>Click to expand details</summary>
+                <p>This content is hidden until you click summary.</p>
+            </details>
+
+
+            <dialog open>
+                <p>This is a Dialog Box Example. </p>
+                <button onclick="this.parentElement.close()">close</button>
+            </dialog>
+
+            
+
+            <p>Current Time tag: <time datetime="2025-11-03">November 3, 2025</time></p>
+        </section>
+
+    </main>
+    <br>
+
+    <footer style="background-color: #0077cc; font-family: 'Courier New', Courier, monospace; " >
+        <p>@ 2025 Example HTML Page</p>
+    </footer>
+</body>
+</html>
